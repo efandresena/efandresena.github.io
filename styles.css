@@ -2,8 +2,8 @@
 :root {
     --primary: #6c757d; /* Gray */
     --secondary: #f8f9fa; /* Light Gray */
-    --accent: #495057; /* Dark Gray */
-    --text: #212529; /* Black */
+    --accent: #1e3d6f; /* Dark Gray */
+    --text: #333333; /* Black */
     --background: #ffffff; /* White */
 }
 
@@ -11,18 +11,20 @@
 html,
 body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
     color: var(--text);
     background-color: var(--background);
-    overflow: auto;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
+/* Header Section */
 header {
     background-color: var(--primary);
     color: var(--background);
@@ -30,64 +32,108 @@ header {
     display: flex-left;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Establish a positioning context */
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    float: left; /* Keep the logo on the left */
+    line-height: 40px; /* Align vertically with nav links */
 }
 
 .nav-links {
     list-style: none;
-    display: flex;
     margin: 0;
     padding: 0;
+    position: absolute; /* Position the nav links on the right */
+    top: 50%; /* Vertically center the links */
+    right: 20px; /* Offset from the right edge */
+    transform: translateY(-50%); /* Fine-tune vertical alignment */
 }
 
 .nav-links li {
-    margin-left: 20px;
+    display: inline-block; /* Place links horizontally */
+    margin-left: 20px; /* Add spacing between links */
 }
 
 .nav-links a {
     color: var(--background);
     text-decoration: none;
+    line-height: 40px; /* Match the height of the logo for alignment */
 }
 
 main {
-    flex: 1;
+    flex: 1; /* Ensures main takes up remaining space */
+    display: flex;
+    flex-direction: column;
 }
 
+/* Hero Section */
 .hero {
     position: relative;
-    text-align: center;
-    min-height: 400px;
+    min-height: 100vh; /* Full viewport height */
+    overflow: hidden;
 }
 
 .cover-photo {
     width: 100%;
-    height: 470px;
+    height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
+.content-container {
+    position: relative;
+    z-index: 1; /* Ensure content is above the cover photo */
+    padding: 20px;
+    height: calc(100% - 40px); /* Subtract padding for precise height */
+}
+
+/* Profile Container */
 .profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 25%; /* 20% of the parent container */
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
+    height: 76%; /* Set height as a percentage of the parent container */
+    display: block; /* Use block-level layout */
+    box-sizing: border-box; /* Include padding in the width/height calculation */
+    float: left; /* Float the container to the left */
 }
 
 .profile-picture {
-    width: 130px;
-    height: 150px;
+    width: 160px;
+    height: 180px;
     border-radius: 50%;
     border: 3px solid var(--background);
+}
+
+/* Info Container */
+.info-container {
+    width: 60%; /* 60% of the parent container */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--background);
+    text-align: left;
+    height: 76%; /* Set height as a percentage of the parent container */
+    display: block; /* Use block-level layout */
+    box-sizing: border-box; /* Include padding in the width/height calculation */
+    float: right; /* Float the container to the right */
+}
+
+.info-container h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.info-container p {
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .button {
@@ -100,37 +146,37 @@ main {
     margin-top: 10px;
 }
 
+/* Clearfix for floated containers */
+.content-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
 footer {
+    position: fixed; /* Sticky footer */
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0; /* Reduced padding for smaller height */
     background-color: var(--primary);
     color: var(--background);
-}
-
-.social-links img {
-    width: 24px;
-    height: 24px;
-    margin: 0 10px;
-}
-
-.search-bar {
-    margin-bottom: 20px;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--accent);
-    border-radius: 5px;
+    font-size: 13px; /* Smaller font size */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
+    .profile-container,
+    .info-container {
+        width: 100%; /* Full width for both containers */
+        height: auto; /* Allow containers to adjust height dynamically */
+        float: none; /* Remove floating for stacked layout */
     }
-    .profile-container {
-        width: 90%;
+
+    .content-container::after {
+        clear: none; /* No need for clearfix on smaller screens */
     }
 }
