@@ -26,6 +26,7 @@ body {
 
 /* Header Section */
 header {
+    z-index: 1000; /* Ensure it stays on top */
     background-color: var(--primary);
     color: var(--background);
     padding: 10px 20px;
@@ -136,6 +137,40 @@ main {
     line-height: 1.6;
 }
 
+/* Project Section */
+.projects {
+    padding: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    ); /* Responsive grid layout */
+    gap: 20px; /* Space between project containers */
+    margin-top: 20px;
+}
+
+.project-container {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--background);
+    box-sizing: border-box;
+}
+
+.project-container h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.project-container p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -145,7 +180,6 @@ main {
     border-radius: 5px;
     margin-top: 10px;
 }
-
 /* Clearfix for floated containers */
 .content-container::after {
     content: "";
@@ -159,10 +193,10 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 10px 0; /* Reduced padding for smaller height */
+    padding: 8px 0; /* Reduced padding for smaller height */
     background-color: var(--primary);
     color: var(--background);
-    font-size: 13px; /* Smaller font size */
+    font-size: 12px; /* Smaller font size */
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
     z-index: 1000; /* Ensure it stays on top */
 }
@@ -179,4 +213,85 @@ footer {
     .content-container::after {
         clear: none; /* No need for clearfix on smaller screens */
     }
+}
+
+/* Documents Section */
+.documents {
+    padding: 20px;
+}
+
+/* Semester Grid Layout */
+.semester-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    ); /* Responsive grid layout */
+    gap: 20px; /* Space between semester containers */
+    margin-top: 20px;
+}
+
+/* Semester Container */
+.semester-container {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--background);
+    box-sizing: border-box;
+}
+
+.semester-container h3 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Unit Grid Layout */
+.unit-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+    ); /* Responsive grid layout for units */
+    gap: 15px; /* Space between unit containers */
+    margin-top: 10px;
+}
+
+/* Unit Container */
+.unit-container {
+    background: rgba(
+        255,
+        255,
+        255,
+        0.5
+    ); /* Slightly lighter background for units */
+    padding: 15px;
+    border-radius: 8px;
+    color: var(--background);
+    box-sizing: border-box;
+}
+
+.unit-container h4 {
+    margin-top: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.unit-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.unit-container li {
+    margin-bottom: 5px;
+}
+
+.unit-container a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.unit-container a:hover {
+    text-decoration: underline;
 }
