@@ -8,12 +8,19 @@
 }
 
 /* General Styles */
+html,
 body {
-    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     color: var(--text);
     background-color: var(--background);
+    overflow: auto;
 }
 
 header {
@@ -46,10 +53,14 @@ header {
     text-decoration: none;
 }
 
+main {
+    flex: 1;
+}
+
 .hero {
     position: relative;
     text-align: center;
-    color: var(--background);
+    min-height: 400px;
 }
 
 .cover-photo {
@@ -59,6 +70,10 @@ header {
 }
 
 .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -90,7 +105,6 @@ footer {
     padding: 10px;
     background-color: var(--primary);
     color: var(--background);
-    margin-top: 20px;
 }
 
 .social-links img {
