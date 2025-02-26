@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < items.length; i++) {
       const itemText = items[i].textContent || items[i].innerText;
       if (itemText.toLowerCase().includes(filter)) {
-        items[i].style.display = "";
+        items[i].style.display = "block";
       } else {
         items[i].style.display = "none";
       }

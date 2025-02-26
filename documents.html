@@ -1,267 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Access course materials, lessons, and exams organized by semester and unit.">
-    <title>Documents</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="#">Documents</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="documents">
-            <h2>Course Materials</h2>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search for documents...">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="List of documents and publications."
+        />
+        <title>Documents</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">Portfolio</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#">Documents</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="documents">
+                <h2>Documents</h2>
+                <ul id="documentList">
+                    <li><a href="#">Document A</a></li>
+                    <li><a href="#">Document B</a></li>
+                    <li><a href="#">Document C</a></li>
+                    <li><a href="#">Document D</a></li>
+                    <li><a href="#">Document E</a></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <div class="social-links">
+                <a href="https://facebook.com/your-profile" target="_blank"
+                    ><img src="assets/images/facebook-icon.jpeg" alt="Facebook"
+                /></a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank"
+                    ><img src="assets/images/linkedin-icon.jpeg" alt="LinkedIn"
+                /></a>
             </div>
-            <div class="semester-grid">
-                <!-- Semester 1 -->
-                <div class="semester-container">
-                    <h3>Semester 1</h3>
-                    <div class="unit-grid">
-                        <!-- Unit 1 -->
-                        <div class="unit-container">
-                            <h4>Unit 1</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_1/Unit_1/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_1/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_1/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_1/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <!-- Repeat for Units 2 to 7 -->
-                        <div class="unit-container">
-                            <h4>Unit 2</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_1/Unit_2/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_2/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_2/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_2/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 3</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_1/Unit_3/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_3/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_3/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_3/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 4</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_1/Unit_4/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_4/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_4/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_4/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 5</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_1/Unit_5/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_5/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_5/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_5/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 6</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_1/Unit_6/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_6/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_6/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_6/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 7</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_1/Unit_7/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_7/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_7/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_1/Unit_7/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Semester 2 -->
-                <div class="semester-container">
-                    <h3>Semester 2</h3>
-                    <div class="unit-grid">
-                        <!-- Unit 1 to Unit 7 -->
-                        <div class="unit-container">
-                            <h4>Unit 1</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_2/Unit_1/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_1/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_1/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_1/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 2</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_2/Unit_2/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_2/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_2/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_2/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 3</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_2/Unit_3/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_3/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_3/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_3/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 4</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_2/Unit_4/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_4/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_4/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_4/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 5</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_2/Unit_5/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_5/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_5/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_5/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 6</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_2/Unit_6/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_6/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_6/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_6/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 7</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_2/Unit_7/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_7/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_7/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_2/Unit_7/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Repeat for Semesters 3 to 6 -->
-
-                <!-- Semester 7 -->
-                <div class="semester-container">
-                    <h3>Semester 7</h3>
-                    <div class="unit-grid">
-                        <!-- Unit 1 to Unit 7 -->
-                        <div class="unit-container">
-                            <h4>Unit 1</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_7/Unit_1/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_1/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_1/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_1/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 2</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_7/Unit_2/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_2/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_2/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_2/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 3</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_7/Unit_3/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_3/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_3/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_3/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 4</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_7/Unit_4/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_4/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_4/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_4/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 5</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_7/Unit_5/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_5/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_5/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_5/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 6</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_7/Unit_6/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_6/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_6/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_6/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                        <div class="unit-container">
-                            <h4>Unit 7</h4>
-                            <ul>
-                                <li><a href="assets/documents/Semester_7/Unit_7/Exercises.pdf">Exercises</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_7/Lesson.pdf">Lesson</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_7/Correction.pdf">Correction</a></li>
-                                <li><a href="assets/documents/Semester_7/Unit_7/Exam.pdf">Exam Subject</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Machine Learning Section -->
-                <div class="semester-container">
-                    <h3>Machine Learning</h3>
-                    <p>This semester focuses on advanced topics in machine learning.</p>
-                    <ul>
-                        <li><a href="assets/documents/Machine_Learning/Overview.pdf">Machine Learning Overview</a></li>
-                        <li><a href="assets/documents/Machine_Learning/Research_Paper.pdf">Research Paper</a></li>
-                        <li><a href="assets/documents/Machine_Learning/Project_Report.pdf">Project Report</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="social-links">
-            <a href="https://facebook.com/your-profile" target="_blank"><img src="assets/images/facebook-icon.png" alt="Facebook"></a>
-            <a href="https://linkedin.com/in/your-profile" target="_blank"><img src="assets/images/linkedin-icon.png" alt="LinkedIn"></a>
-        </div>
-        <p>&copy; 2025 Mr. Fandresena Randria. All rights reserved.</p>
-    </footer>
-    <script src="assets/js/script.js"></script>
-</body>
+            <p>&copy; 2025 Mr. Fandresena Randria. All rights reserved.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>
