@@ -61,24 +61,25 @@ header {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Stack the logo and nav-links vertically */
-        align-items: flex-start; /* Align everything to the left */
+        flex-direction: row; /* Horizontal layout */
+        align-items: flex-start; /* Align to the top */
+        justify-content: flex-start; /* Align logo to the left, let links flow */
     }
 
     .logo {
-        margin-bottom: 10px; /* Add spacing between the logo and nav-links */
+        margin-bottom: 0; /* No vertical spacing */
+        margin-right: 20px; /* Maintain space between logo and links */
+        font-size: 20px; /* Optional: Reduce font size for mobile */
     }
 
     .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        position: static; /* Remove absolute positioning */
-        background-color: transparent; /* No background needed */
-        border-radius: 0; /* Remove rounded corners */
-        padding: 0; /* Remove padding */
+        flex-direction: row; /* Keep links horizontal */
+        gap: 10px; /* Space between links */
+        margin-left: auto; /* Push nav-links to the right */
     }
 
     .nav-links li {
-        margin-bottom: 10px; /* Add spacing between links */
+        margin-bottom: 0; /* No vertical spacing */
     }
 }
 
@@ -195,27 +196,9 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        flex-direction: row; /* Horizontal layout */
-        align-items: flex-start; /* Align items to the top */
-        justify-content: space-between; /* Distribute space between logo and nav-links */
-        padding: 10px; /* Reduce padding if needed for smaller screens */
-    }
-
-    .logo {
-        margin-bottom: 0; /* Remove bottom margin since it's now side-by-side */
-        font-size: 20px; /* Optional: Reduce font size for mobile */
-    }
-
-    .nav-links {
-        flex-direction: row; /* Keep links in a row */
-        gap: 10px; /* Reduce gap between links for mobile */
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav-links li {
-        margin-bottom: 0; /* Remove bottom margin since links are in a row */
+    .profile-picture {
+        width: 120px;
+        height: 120px;
     }
 }
 
