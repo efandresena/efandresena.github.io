@@ -32,17 +32,19 @@ header {
     background-color: var(--primary); /* Gray background */
     color: var(--text-light); /* White text for dark headers */
     padding: 10px 20px;
-    display: flex;
+    display: flex; /* Use flexbox for layout */
     align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute space between logo and nav-links */
     position: fixed; /* Fix the header at the top */
     width: 100%; /* Ensure the header spans the full width */
     top: 0; /* Stick to the top of the viewport */
 }
+
 .logo {
     font-size: 24px;
     font-weight: bold;
-    margin-right: auto; /* Push the logo to the left */
 }
+
 .nav-links {
     list-style: none;
     margin: 0;
@@ -50,6 +52,7 @@ header {
     display: flex; /* Keep links in a row */
     gap: 20px; /* Space between links */
 }
+
 .nav-links a {
     color: var(--text-light); /* White links for dark headers */
     text-decoration: none;
@@ -57,15 +60,23 @@ header {
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack the logo and nav-links vertically */
+        align-items: flex-start; /* Align everything to the left */
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Add spacing between the logo and nav-links */
+    }
+
     .nav-links {
         flex-direction: column; /* Stack links vertically */
-        position: absolute; /* Position links below the logo */
-        top: 50px; /* Move links below the header */
-        left: 10px; /* Align links to the top-left */
-        background-color: var(--primary); /* Match header background */
-        border-radius: 5px; /* Add rounded corners */
-        padding: 10px; /* Add padding for spacing */
+        position: static; /* Remove absolute positioning */
+        background-color: transparent; /* No background needed */
+        border-radius: 0; /* Remove rounded corners */
+        padding: 0; /* Remove padding */
     }
+
     .nav-links li {
         margin-bottom: 10px; /* Add spacing between links */
     }
@@ -184,9 +195,27 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .profile-picture {
-        width: 120px;
-        height: 120px;
+    header {
+        flex-direction: row; /* Horizontal layout */
+        align-items: flex-start; /* Align items to the top */
+        justify-content: space-between; /* Distribute space between logo and nav-links */
+        padding: 10px; /* Reduce padding if needed for smaller screens */
+    }
+
+    .logo {
+        margin-bottom: 0; /* Remove bottom margin since it's now side-by-side */
+        font-size: 20px; /* Optional: Reduce font size for mobile */
+    }
+
+    .nav-links {
+        flex-direction: row; /* Keep links in a row */
+        gap: 10px; /* Reduce gap between links for mobile */
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li {
+        margin-bottom: 0; /* Remove bottom margin since links are in a row */
     }
 }
 
